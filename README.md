@@ -30,7 +30,7 @@ For example:
 python3 train.py --epochs 5
 ```
 
-## IV. 
+## IV. Result
 After finish training, you can find history of training in both csv and png file. You also have BERT weights to apply to other uses.
 
 ## HOANG CAO BAO
