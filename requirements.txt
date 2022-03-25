@@ -5,3 +5,4 @@ tensorflow_text
 pandas
 numpy
 sklearn
+matplotlib
