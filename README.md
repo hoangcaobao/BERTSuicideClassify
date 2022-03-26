@@ -1,4 +1,4 @@
-# BERTSuicdeClassify
+# BERTSuicideClassify
 
 I implemented BERT model to classify suicide text from Reddit platform. Data can be found at [link](https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch).
 
