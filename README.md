@@ -18,6 +18,7 @@ pip3 install -r requirements.txt
 ```
 ## II. Set up data
 Go to Kaggle [link](https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch) to download csv file
+
 Move the csv file to folder
 
 ## III. Train model
