@@ -4,18 +4,18 @@ from sklearn.model_selection import train_test_split
 
 def remove_punc(text):
   #remove all punctuation
-  clean_text = re.sub(r'[^\w\s]', '', text)
+  clean_text = re.sub(r'[^\w\s]', ' ', text)
   return clean_text
 
 def remove_html(text):
   #remove all html tag
   cleaner=re.compile("<[^>]*>")
-  clean_text=re.sub(cleaner, '', text)
+  clean_text=re.sub(cleaner, ' ', text)
   return clean_text
 
 def remove_urls(text):
   #remove all link 
-  clean_text=re.sub(r'\w+:\/{2}[\d\w-]+(\.[\d\w-]+)*(?:(?:\/[^\s/]*))*', '', text)
+  clean_text=re.sub(r'\w+:\/{2}[\d\w-]+(\.[\d\w-]+)*(?:(?:\/[^\s/]*))*', ' ', text)
   return clean_text
 
 def remove_emoji(text):
@@ -28,12 +28,12 @@ def remove_emoji(text):
                       u"\U00002702-\U000027B0"
                       u"\U000024C2-\U0001F251"
                       "]+", flags=re.UNICODE)
-  clean_text=re.sub(cleaner, '', text)
+  clean_text=re.sub(cleaner, ' ', text)
   return clean_text
 
 def remove_email(text):
   #remove email
-  clean_text=re.sub(r'([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)', '', text)
+  clean_text=re.sub(r'([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)', ' ', text)
   return clean_text
 
 def remove_multi_space(text):
@@ -53,10 +53,10 @@ def clean(texts):
     except:
       pass
     texts[i]=remove_punc(texts[i])
-    texts[i]=remove_multi_space(texts[i])
-    texts[i]=texts[i].replace('\n', '')
+    texts[i]=texts[i].replace('\n', ' ')
     texts[i]=texts[i].strip()
     texts[i]=texts[i].lower()
+    texts[i]=remove_multi_space(texts[i])
 
 def split(x, y, test_size):
   #split data
