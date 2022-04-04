@@ -37,7 +37,7 @@ python3 train.py --epochs 5
 ```
 
 ## IV. Result
-After finish training, you can find history of training in both csv and png file. You also have BERT weights to apply to other uses.
+After finish training, you can find history of training in both csv and png file and confusion matrix image. You also have BERT weights to apply to other uses.
 
 Here is the example of my model performance on dataset with 5 epochs
 ![](history.png)
