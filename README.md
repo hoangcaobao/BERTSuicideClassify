@@ -41,4 +41,7 @@ After finish training, you can find history of training in both csv and png file
 
 Here is the example of my model performance on dataset with 5 epochs
 ![](history.png)
+
+Here is the example of confusion matrix of model on 5000 random dataset
+![](confusion.png)
 ## HOANG CAO BAO
