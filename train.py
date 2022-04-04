@@ -45,6 +45,6 @@ if __name__ == "__main__":
 
     model.compile(loss='sparse_categorical_crossentropy', optimizer=tf.keras.optimizers.Adam(args.lr), metrics=['accuracy'])
     history=model.fit(x_train, y_train, epochs=args.epochs, batch_size=args.batch_size, validation_data=(x_valid,y_valid), callbacks=[model_callback])
-    preds = model.predict(texts).argmax(axis=-1)
+    preds = model.predict(x_test).argmax(axis=-1)
     save_plot_and_csv(history, args.history_csv, args.history_image)
     save_confusion_matrix(y_test, preds)
